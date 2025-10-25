@@ -84,4 +84,5 @@ Visual Studio seharusnya melakukan ini secara otomatis saat Anda membuka proyek.
 4.  Klik tombol **Try it out**.
 5.  Klik tombol **Execute**.
 6.  *Scroll* ke bawah ke bagian **Responses**. Jika semua berhasil, Anda akan melihat **Response body** dengan data JSON lengkap yang diambil dari database MySQL Anda, sesuai dengan format yang diinginkan.
-![Contoh Hasil JSON di Swagger](images/output1.png)(images/output2.png)
+![Contoh Hasil JSON di Swagger](images/output1.png)
+![Contoh Hasil JSON di Swagger](images/output2.png)
