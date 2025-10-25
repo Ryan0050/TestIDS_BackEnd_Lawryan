@@ -21,7 +21,7 @@ Ikuti langkah-langkah ini untuk menjalankan proyek secara lokal.
 1.  Buka terminal atau Command Prompt.
 2.  Clone repositori ini ke komputer lokal Anda:
     ```bash
-    git clone [URL_REPOSITORI_GITHUB_ANDA_DI_SINI]
+    git clone https://github.com/Ryan0050/TestIDS_BackEnd_Lawryan.git
     ```
 3.  Masuk ke folder proyek dan buka file `.sln` (Solusi) dengan Visual Studio 2022.
 
@@ -86,3 +86,19 @@ Visual Studio seharusnya melakukan ini secara otomatis saat Anda membuka proyek.
 6.  *Scroll* ke bawah ke bagian **Responses**. Jika semua berhasil, Anda akan melihat **Response body** dengan data JSON lengkap yang diambil dari database MySQL Anda, sesuai dengan format yang diinginkan.
 ![Contoh Hasil JSON di Swagger](images/output1.png)
 ![Contoh Hasil JSON di Swagger](images/output2.png)
+
+## Struktur Project
+
+````
+TestIDS_Lawryan/
+├── Controllers/
+│   └── TransactionController.cs
+├── Data/
+│   └── ApplicationDbContext.cs
+├── Models/
+│   ├── MsStatus.cs        
+│   ├── TrTransaction.cs
+│   └── TransactionResponse.cs
+├── appsettings.json
+└── Program.cs
+````
