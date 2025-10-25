@@ -42,12 +42,23 @@ Proyek ini memerlukan database MySQL untuk berjalan.
 Proyek ini dikonfigurasi untuk terhubung ke database XAMPP default (`root` tanpa password).
 
 1.  Buka file `appsettings.json` di Visual Studio.
-2.  Pastikan bagian `ConnectionStrings` Anda terlihat seperti ini:
+2.  Kemudian buka file `appsettings.Development.json` dengan dropdown `appsettings.json`
+3.  pastikan bagian `appsettings.Development.json` Anda terlihat seperti ini:
 
     ```json
-    "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Database=database_transaction;User=root;Password=;"
+    {
+        "Logging": {
+            "LogLevel": {
+            "Default": "Information",
+            "Microsoft.AspNetCore": "Warning"
+            }
+        },
+        "AllowedHosts": "*",
+        "ConnectionStrings": {
+            "DefaultConnection": "Server=localhost;Database=database_transaction;User=root;Password=;"
+        }
     }
+
     ```
 3.  Jika instalasi XAMPP MySQL Anda menggunakan *password*, harap sesuaikan bagian `Password=;`.
 
@@ -59,7 +70,7 @@ Visual Studio seharusnya melakukan ini secara otomatis saat Anda membuka proyek.
 
 ## Menjalankan Proyek
 
-1.  Di Visual Studio 2022, pastikan *startup profile* diatur ke nama proyek Anda (misal: `Project API`).
+1.  Di Visual Studio 2022, pastikan *startup profile* diatur ke nama proyek Anda (misal: `Project_API`).
 2.  Tekan **F5** atau klik tombol *Run* (panah hijau).
 3.  Proyek akan di-*build* dan dijalankan. Sebuah browser akan otomatis terbuka ke halaman **Swagger UI**.
 
@@ -73,3 +84,4 @@ Visual Studio seharusnya melakukan ini secara otomatis saat Anda membuka proyek.
 4.  Klik tombol **Try it out**.
 5.  Klik tombol **Execute**.
 6.  *Scroll* ke bawah ke bagian **Responses**. Jika semua berhasil, Anda akan melihat **Response body** dengan data JSON lengkap yang diambil dari database MySQL Anda, sesuai dengan format yang diinginkan.
+![Contoh Hasil JSON di Swagger](images/output1.png)(images/output2.png)
